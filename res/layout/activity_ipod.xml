@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="3" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2" >
+        <FrameLayout 
+            android:id="@+id/ipod_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/paly_bg"            
+            />
+           
+        <!-- 
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/paly_bg">
+        	<TextView
+           		android:id="@+id/singer"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_above="@+id/name"
+            	android:layout_centerHorizontal="true"
+            	android:layout_marginBottom="20dp"
+            	android:text="singer" />
+
+        	<TextView
+            	android:id="@+id/name"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_above="@+id/album"
+            	android:layout_centerHorizontal="true"
+            	android:layout_marginBottom="20dp"
+            	android:text="name" />
+
+        	<TextView
+            	android:id="@+id/album"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentBottom="true"
+            	android:layout_centerHorizontal="true"
+            	android:layout_marginBottom="30dp"
+            	android:text="album" />            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100dp"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/pause" />
+
+            <ImageView
+                android:id="@+id/previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/play"
+                android:src="@drawable/previous" />
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/play"
+                android:src="@drawable/next" />
+        </RelativeLayout>
+        -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/back" />
+    </RelativeLayout>
+     
+
+    <View android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/space_line"/>
+    
+    
+    <RelativeLayout 
+        android:id="@+id/ipod_list"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ipod_icon"/>
+    </RelativeLayout>   
+
+</LinearLayout>

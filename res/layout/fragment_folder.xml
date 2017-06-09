@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <TextView 
+        android:id="@+id/folder_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="文件路径"
+        android:layout_marginLeft="10dp"/>
+    <ListView 
+        android:id="@+id/list_folder"
+        android:layout_below="@id/folder_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
