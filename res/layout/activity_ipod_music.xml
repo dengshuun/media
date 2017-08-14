@@ -1,0 +1,236 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2" >
+
+        <LinearLayout
+            android:id="@+id/ipod_music_main_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/solid_black"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_media_shading"
+                android:orientation="vertical" >
+
+                <com.hwatong.media.common.MarqueeTextView
+                    android:id="@+id/ipod_txt_song"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/txt_song"
+                    android:textColor="@color/white"
+                    android:textSize="36sp" />
+
+                <com.hwatong.media.common.MarqueeTextView
+                    android:id="@+id/ipod_txt_singer"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/txt_singer"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <com.hwatong.media.common.MarqueeTextView
+                    android:id="@+id/ipod_txt_album"
+                    android:layout_width="450dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/txt_album"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+            </LinearLayout>
+   
+            <LinearLayout
+                android:id="@+id/music_control_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/ipod_music_curtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/txt_time"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+
+                <com.hwatong.media.common.MySeekBar
+                    android:id="@+id/ipod_music_seekbar"
+                    android:layout_width="630dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxHeight="8dp"
+                    android:minHeight="8dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:progressDrawable="@drawable/seekbar_progress"
+                    android:thumb="@drawable/seekbar_thumb"
+                    android:thumbOffset="10dp" />
+
+                <TextView
+                    android:id="@+id/ipod_music_alltime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/txt_time"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ipod_music_control_view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_loop_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="150dp"
+                    android:background="@drawable/single_cycle_selector" />
+
+                <ImageView
+                    android:id="@+id/ipod_music_previous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="50dp"
+                    android:layout_toLeftOf="@+id/ipod_music_play"
+                    android:contentDescription="@null"
+                    android:src="@drawable/btn_music_pre" />
+
+                <ImageView
+                    android:id="@+id/ipod_music_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/btn_music_play" />
+
+                <ImageView
+                    android:id="@+id/ipod_music_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/ipod_music_play"
+                    android:contentDescription="@null"
+                    android:src="@drawable/btn_music_next" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/ipod_music_folder_layout"
+            android:name="com.hwatong.ipod.ui.IPodFolderFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_media_bottom_bar"
+            android:gravity="bottom" >
+
+            <RelativeLayout
+                android:id="@+id/ipod_btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_back_selector" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/system_main_back" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/bottom_bar_dividing_line" />
+
+            <LinearLayout
+                android:id="@+id/ipod_btn_folder"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_bar_selector"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/ipod_folder_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/img_folder_icon" />
+
+                <TextView
+                    android:id="@+id/ipod_folder_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/folder"
+                    android:textColor="@color/white"
+                    android:textSize="28sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/img_interval_line" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+        <ImageView
+            android:id="@+id/ipod_right_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ipod_right_icon" />
+        <ListView
+        	android:id="@+id/ipod_list_music"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:background="@android:color/background_dark"
+        	android:choiceMode="singleChoice"
+       		android:scrollbarStyle="outsideInset"
+        	android:scrollbarThumbVertical="@drawable/scrollbar_thumb"
+        	android:scrollbarTrackVertical="@drawable/scrollbar_bg"
+        	android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

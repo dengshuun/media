@@ -2,39 +2,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_background"
+    android:background="@android:color/black"
     tools:context="${relativePackage}.${activityClass}" >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:orientation="vertical" >
+        android:layout_weight="2" >
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/usb_picture_main_layout"
             android:layout_width="match_parent"
-            android:layout_height="497dp" >
+            android:layout_height="match_parent"
+            android:layout_above="@+id/usb_picture_bottom_bar" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_24" />
 
             <RelativeLayout
-                android:id="@+id/video_control_view2"
+                android:id="@+id/picture_control_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:background="@drawable/bg_picture_bottom_control" >
 
                 <ImageView
-                    android:id="@+id/video_previous"
+                    android:id="@+id/picture_previous"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="50dp"
-                    android:layout_toLeftOf="@+id/video_play"
+                    android:layout_toLeftOf="@+id/picture_play"
                     android:contentDescription="@null"
                     android:src="@drawable/btn_music_pre" />
 
                 <ImageView
-                    android:id="@+id/video_play"
+                    android:id="@+id/picture_play"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -43,12 +57,12 @@
                     android:src="@drawable/btn_music_play" />
 
                 <ImageView
-                    android:id="@+id/video_next"
+                    android:id="@+id/picture_next"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="50dp"
-                    android:layout_toRightOf="@+id/video_play"
+                    android:layout_toRightOf="@+id/picture_play"
                     android:contentDescription="@null"
                     android:src="@drawable/btn_music_next" />
 
@@ -58,31 +72,103 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="50dp"
-                    android:layout_toRightOf="@+id/video_next"
-                    android:background="@drawable/btn_picture_resize" />
+                    android:layout_toRightOf="@+id/picture_next"
+                    android:background="@drawable/btn_vedio_full_screen" />
             </RelativeLayout>
-        </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/usb_picture_folder_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/usb_picture_bottom_bar" />
 
         <LinearLayout
+            android:id="@+id/usb_picture_bottom_bar"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_gravity="bottom" >
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_media_bottom_bar"
+            android:gravity="bottom" >
 
-            <Button
+            <RelativeLayout
                 android:id="@+id/btn_back"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_back_selector" >
 
-            <Button
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/system_main_back" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/bottom_bar_dividing_line" />
+
+            <LinearLayout
                 android:id="@+id/btn_folder"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
-                android:text="@string/folder"
-                android:textColor="@color/white" />
+                android:layout_weight="1"
+                android:background="@drawable/bottom_bar_selector"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/img_folder_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/img_folder_icon" />
+
+                <TextView
+                    android:id="@+id/txt_folder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/folder"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_24" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/bottom_bar_dividing_line" />
+
+            <LinearLayout
+                android:id="@+id/btn_folder_thumbnails"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_bar_selector"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/img_folder_thumbnails_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/img_folder_thumbnails_icon" />
+
+                <TextView
+                    android:id="@+id/txt_folder_thumbnails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/folder_thumbnails"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_24" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -91,9 +177,15 @@
         android:src="@drawable/img_interval_line" />
 
     <ListView
+        android:id="@+id/list_picture"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1" >
+        android:layout_weight="1"
+        android:background="@android:color/background_dark"
+        android:choiceMode="singleChoice"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarThumbVertical="@drawable/scrollbar_thumb"
+        android:scrollbarTrackVertical="@drawable/scrollbar_bg" >
     </ListView>
 
 </LinearLayout>

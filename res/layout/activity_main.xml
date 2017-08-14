@@ -15,69 +15,79 @@
             android:id="@+id/usb_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/media_mian_app_bg"
-            android:gravity="center_horizontal">
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_media_mian_app_selector"
+            android:clickable="false"
+            android:gravity="center_horizontal" >
 
             <TextView
                 android:id="@+id/txt_usb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/usb_icon"
+                android:background="@drawable/bg_usb_selector"
                 android:gravity="center_horizontal|bottom"
                 android:text="@string/txt_usb"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textColor="@color/textcolor_selector"
+                android:textSize="@dimen/text_size_18" />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/btmusic_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/usb_layout"
-            android:background="@drawable/media_mian_app_bg"
+            android:background="@drawable/bg_media_mian_app_selector"
             android:gravity="center_horizontal" >
 
             <TextView
                 android:id="@+id/txt_btmusic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btmusic_icon"
+                android:background="@drawable/bg_btmusic_selector"
                 android:gravity="center_horizontal|bottom"
                 android:text="@string/txt_btmusic"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textColor="@color/textcolor_selector"
+                android:textSize="@dimen/text_size_18" />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/ipod_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/btmusic_layout"
-            android:background="@drawable/media_mian_app_bg"
-            android:gravity="center_horizontal">
+            android:background="@drawable/bg_media_mian_app_selector"
+            android:gravity="center_horizontal" >
 
             <TextView
                 android:id="@+id/txt_ipod"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ipod_icon"
+                android:background="@drawable/bg_ipod_selector"
                 android:gravity="center_horizontal|bottom"
                 android:text="@string/txt_ipod"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textColor="@color/textcolor_selector"
+                android:textSize="@dimen/text_size_18" />
         </RelativeLayout>
 
-        <Button
+        <RelativeLayout
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/btn_back" />
+            android:background="@drawable/btn_back_selector" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:src="@drawable/system_main_back" />
+        </RelativeLayout>
     </RelativeLayout>
 
     <ImageView
@@ -86,22 +96,13 @@
         android:contentDescription="@null"
         android:src="@drawable/img_interval_line" />
 
-    <RelativeLayout
+    <ImageView
         android:id="@+id/right_layout"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@drawable/media_right_bg" >
-
-        <TextView
-            android:id="@+id/txt_device_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="400dp"
-            android:text="@string/device_status"
-            android:textColor="@color/white"
-            android:textSize="36sp" />
-    </RelativeLayout>
+	
+    </ImageView>
 
 </LinearLayout>
