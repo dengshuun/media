@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_ipod_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\bg_ipod_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\calling_hang_up_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\calling_hang_up_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\progress_medium.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\progress_medium.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_music_pause.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\btn_music_pause.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_back_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\btn_back_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\seekbar_progress.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\seekbar_progress.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\usb_video_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\usb_video_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_music_pre.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\btn_music_pre.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\usb_music_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\usb_music_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\media_list_item_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\media_list_item_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_media_mian_app_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\bg_media_mian_app_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_usb_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\bg_usb_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\folder_random_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\folder_random_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\usb_picture_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\usb_picture_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\picture_grid_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\picture_grid_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_vedio_full_screen.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\btn_vedio_full_screen.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_picture_resize.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\btn_picture_resize.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_music_play.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\btn_music_play.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_btmusic_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\bg_btmusic_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\folder_cycle_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\folder_cycle_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\folder_item_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\folder_item_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_half_screen.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\btn_half_screen.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\play_in_order_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\play_in_order_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_bar_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\bottom_bar_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\single_cycle_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\single_cycle_selector.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_music_next.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\btn_music_next.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable\\calling_answer_selector.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable\\calling_answer_selector.xml"
+    }
+]

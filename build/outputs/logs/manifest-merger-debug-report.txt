@@ -1,0 +1,173 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:2:1-93:12
+	package
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:3:5-39
+	android:versionName
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:5:5-30
+		INJECTED from D:\workspace\MediaUI\AndroidManifest.xml
+		INJECTED from D:\workspace\MediaUI\AndroidManifest.xml
+	android:versionCode
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:4:5-28
+		INJECTED from D:\workspace\MediaUI\AndroidManifest.xml
+		INJECTED from D:\workspace\MediaUI\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:9:9-38
+	android:minSdkVersion
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:8:9-35
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:11:5-80
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:11:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:12:22-78
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:13:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:14:22-76
+uses-permission#android.permission.INTERNET
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:15:5-67
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:15:22-64
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:16:5-75
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:16:22-72
+uses-permission#android.permission.READ_LOGS
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:17:5-68
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:17:22-65
+uses-permission#android.permission.VIBRATE
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:18:5-66
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:18:22-63
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:19:5-73
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:19:22-70
+uses-permission#android.permission.WAKE_LOCK
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:20:5-68
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:20:22-65
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:21:5-80
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:21:22-77
+uses-permission#android.permission.SET_WALLPAPER
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:22:5-72
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:22:22-69
+uses-permission#android.permission.GET_TASKS
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:23:5-68
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:23:22-65
+application
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:25:5-91:19
+	android:label
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:28:9-41
+	android:allowBackup
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:26:9-35
+	android:icon
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:27:9-45
+	android:theme
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:29:9-56
+activity#com.hwatong.ipod.ui.IPodMainActivity
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:30:9-38:20
+	android:launchMode
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:32:13-48
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:31:13-64
+intent-filter#android.intent.category.DEFAULT+com.hwatong.ipod.DEVICE_ATTACHED
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:33:13-37:29
+action#com.hwatong.ipod.DEVICE_ATTACHED
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:34:17-75
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:34:25-72
+category#android.intent.category.DEFAULT
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:36:17-76
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:36:27-73
+activity#com.hwatong.btmusic.ui.BluetoothMusicActivity
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:39:9-47:20
+	android:launchMode
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:41:13-48
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:40:13-73
+intent-filter#android.intent.category.DEFAULT+com.hwatong.btmusic.CONNECTED
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:42:13-46:29
+action#com.hwatong.btmusic.CONNECTED
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:43:17-72
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:43:25-69
+activity#com.hwatong.usbmusic.UsbMusicActivity
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:48:9-56:20
+	android:launchMode
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:50:13-48
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:49:13-65
+intent-filter#android.intent.category.DEFAULT+com.hwatong.media.MUSIC_PLAYER
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:51:13-55:29
+action#com.hwatong.media.MUSIC_PLAYER
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:52:17-73
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:52:25-70
+activity#com.hwatong.media.common.MainActivity
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:57:9-70:20
+	android:launchMode
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:59:13-44
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:58:13-65
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:60:13-64:29
+action#android.intent.action.MAIN
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:61:17-69
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:61:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:63:17-77
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:63:27-74
+intent-filter#android.intent.category.DEFAULT+com.hwatong.media.MAIN
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:65:13-69:29
+action#com.hwatong.media.MAIN
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:66:17-65
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:66:25-62
+activity#com.hwatong.usbpicture.UsbPictureActivity
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:71:9-80:20
+	android:label
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:73:13-63
+	android:launchMode
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:74:13-48
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:72:13-69
+intent-filter#android.intent.category.DEFAULT+com.hwatong.media.USB_PICTURE
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:75:13-79:29
+action#com.hwatong.media.USB_PICTURE
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:76:17-72
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:76:25-69
+activity#com.hwatong.usbvideo.UsbVideoActivity
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:81:9-90:20
+	android:label
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:83:13-61
+	android:launchMode
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:84:13-48
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:82:13-65
+intent-filter#android.intent.category.DEFAULT+com.hwatong.media.USB_VIDEO
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:85:13-89:29
+action#com.hwatong.media.USB_VIDEO
+ADDED from D:\workspace\MediaUI\AndroidManifest.xml:86:17-70
+	android:name
+		ADDED from D:\workspace\MediaUI\AndroidManifest.xml:86:25-67

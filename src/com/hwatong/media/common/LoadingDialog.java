@@ -1,6 +1,5 @@
 package com.hwatong.media.common;
 
-
 import android.app.Dialog;
 import android.content.Context;
 import android.view.Gravity;
@@ -14,8 +13,9 @@ public class LoadingDialog extends Dialog {
 	public LoadingDialog(Context context, int theme, int id) {
 		super(context, theme);
 		this.setContentView(R.layout.loading_dialog);
-		this.setCanceledOnTouchOutside(false);
-		this.getWindow().getAttributes().gravity = Gravity.CENTER;
+		this.setCanceledOnTouchOutside(true);
+		this.getWindow().getAttributes().gravity = Gravity.LEFT;
+		this.getWindow().getAttributes().x = 66;
 		setText(id);
 	}
 

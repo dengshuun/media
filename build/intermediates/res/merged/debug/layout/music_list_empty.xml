@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_radio_update"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/music_list_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="160dp"
+        android:text="@string/txt_no_music"
+        android:textColor="@android:color/white"
+        android:textSize="32sp" />
+
+</LinearLayout>

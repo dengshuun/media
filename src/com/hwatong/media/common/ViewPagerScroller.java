@@ -13,7 +13,7 @@ import android.widget.Scroller;
  * 
  */
 public class ViewPagerScroller extends Scroller {
-    private int mScrollDuration = 1000;             // 滑动速度
+    private int mScrollDuration = 500;             // 滑动速度
  
     /**
      * 设置速度速度

@@ -12,6 +12,7 @@ import com.hwatong.ipod.NowPlaying;
 import com.hwatong.ipod.Playlist;
 import com.hwatong.media.common.R;
 import com.hwatong.media.common.Constant;
+import com.hwatong.media.common.Utils;
 import com.hwatong.statusbarinfo.aidl.IStatusBarInfo;
 
 import android.os.Bundle;
@@ -22,6 +23,9 @@ import android.os.RemoteException;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SeekBar;
@@ -35,10 +39,11 @@ import android.content.IntentFilter;
 import android.content.ServiceConnection;
 
 public class IPodMainActivity extends Activity implements OnClickListener {
+
 	/**
 	 * 播放列表
 	 */
-	private List<MediaItem> mediaItems = new ArrayList<MediaItem>();
+	private List<MediaItem> mediaItems = null;
 	/**
 	 * 播放状态
 	 */
@@ -69,6 +74,8 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 	private TextView mSingerText;
 	private TextView mAlbumText;
 	private SeekBar miPodSeekBar;
+	private TextView mCurrentProgress;
+	private TextView mAllProgress;
 	/**
 	 * 底部文件夹
 	 */
@@ -81,6 +88,13 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 	private ImageView mIPodRightIcon;
 
 	private IPodAdapter mAdapter;
+
+	/**
+	 * 循环模式
+	 */
+	private Button mLoopModeOne;
+	private Button mLoopModeTwo;
+	private final int[] PLAY_MODE_RES = { R.drawable.folder_cycle_red, R.drawable.single_cycle_red, R.drawable.folder_cycle_gray };
 
 	/**
 	 * 状态栏信息
@@ -98,7 +112,7 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 			statusBarInfo = IStatusBarInfo.Stub.asInterface(service);
 			try {
 				if (statusBarInfo != null) {
-					statusBarInfo.setCurrentPageName("iPOD");
+					statusBarInfo.setCurrentPageName("ipod");
 				}
 			} catch (RemoteException e) {
 				e.printStackTrace();
@@ -159,6 +173,11 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 
 			switch (msg.what) {
 			case Constant.MSG_MEDIAITEM_RECEIVED:
+				updateNowPlaying(getNowing(true));
+				if (mAdapter != null) {
+					mAdapter.setmNowPlaying(getNowing(false));
+				}
+				refreshPlayList();
 				break;
 			case Constant.MSG_MEDIALIBRARYINFORMATION_RECEIVED:
 				break;
@@ -206,8 +225,7 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 				Log.d(Constant.TAG_IPOD, "ipodUI registerCallback");
 				try {
 					mService.registerCallback(mCallback);
-					mediaItems = getAllMusic();
-					refreshPlayList();
+					mService.play();
 				} catch (RemoteException e) {
 					e.printStackTrace();
 				}
@@ -239,10 +257,10 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ipod_music);
+		startService(new Intent(Constant.IPOD_SERVICE));
 		bindService(new Intent(Constant.IPOD_SERVICE), mServiceConnection, BIND_AUTO_CREATE);
 		registerReceiver(mReceiver, new IntentFilter(Constant.MEDIA_PLAY_STATUS));
 		initUI();
-
 	}
 
 	private void initUI() {
@@ -264,12 +282,17 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 		miPodSeekBar = (SeekBar) findViewById(R.id.ipod_music_seekbar);
 		mFloderIcon = (ImageView) findViewById(R.id.ipod_folder_icon);
 		mFlodertxt = (TextView) findViewById(R.id.ipod_folder_txt);
+		mLoopModeOne = (Button) findViewById(R.id.btn_loop_mode);
+		mLoopModeOne.setOnClickListener(this);
+		mLoopModeTwo = (Button) findViewById(R.id.btn_loop_mode2);
+		mLoopModeTwo.setOnClickListener(this);
 
 		mIPodFolderFragment = (IPodFolderFragment) getFragmentManager().findFragmentById(R.id.ipod_music_folder_layout);
 
 		mIPodRightIcon = (ImageView) findViewById(R.id.ipod_right_icon);
 		mMediaItemsView = (ListView) findViewById(R.id.ipod_list_music);
-
+		mCurrentProgress = (TextView) findViewById(R.id.ipod_music_curtime);
+		mAllProgress = (TextView) findViewById(R.id.ipod_music_alltime);
 		isShowFloderFragment(false);
 	}
 
@@ -296,6 +319,8 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 	protected void onResume() {
 		super.onResume();
 		updateNowPlaying(getNowing(true));
+		handler.removeMessages(Constant.MSG_MEDIAPLAYLIST_RECEIVED);
+		handler.sendEmptyMessage(Constant.MSG_MEDIAPLAYLIST_RECEIVED);
 		bindService(new Intent("com.remote.hwatong.statusinfoservice"), statusBarConnection, BIND_AUTO_CREATE);
 	}
 
@@ -322,15 +347,19 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 				mIPodFolderFragment.onClickFolder();
 			}
 		} else if (mPlayStatus == v) {
+			Log.d(Constant.TAG_IPOD, "onClick");
 			if (mService == null) {
 				Log.d(Constant.TAG_IPOD, "Ipod Service is mull");
 				return;
 			}
 			try {
 				if (getNowing(false) != null && getNowing(false).mPlaybackStatus) {
+					Log.d(Constant.TAG_IPOD, "playing:" + getNowing(false).mPlaybackStatus);
 					mService.pause();
+					mPlayStatus.setImageResource(R.drawable.btn_music_play);
 				} else {
 					mService.play();
+					mPlayStatus.setImageResource(R.drawable.btn_music_pause);
 				}
 			} catch (RemoteException e) {
 				Log.d(Constant.TAG_IPOD, "Remount error");
@@ -358,6 +387,32 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 				Log.d(Constant.TAG_IPOD, "Remount error");
 				e.printStackTrace();
 			}
+		} else if (mLoopModeOne == v) {
+			if (mService == null) {
+				Log.d(Constant.TAG_IPOD, "Ipod Service is mull");
+				return;
+			}
+			try {
+				if (mLoopModeOne.isSelected()) {
+					mLoopModeOne.setSelected(false);
+					mService.shuffle();
+				} else {
+					mLoopModeOne.setSelected(true);
+					mService.shuffle();
+				}
+			} catch (Exception e) {
+			}
+		} else if (mLoopModeTwo == v) {
+			if (mService == null) {
+				Log.d(Constant.TAG_IPOD, "Ipod Service is mull");
+				return;
+			}
+			try {
+				mService.repeat();
+				mLoopModeTwo.setBackground(getResources().getDrawable(PLAY_MODE_RES[mService.getNowPlaying(true).mPlaybackRepeatMode]));
+			} catch (RemoteException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
@@ -383,6 +438,9 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 	 * @param playList
 	 */
 	private void refreshPlayList() {
+		if (mediaItems == null) {
+			mediaItems = getAllMusic();
+		}
 		if (mediaItems.size() == 0) {
 			mMediaItemsView.setVisibility(View.INVISIBLE);
 			mIPodRightIcon.setVisibility(View.VISIBLE);
@@ -394,6 +452,21 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 			mMediaItemsView.setSelector(R.drawable.media_list_item_selector);
 			mAdapter.notifyDataSetChanged();
 		}
+		mMediaItemsView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				MediaItem item = (MediaItem) mAdapter.getItem(position);
+				try {
+					Log.d(Constant.TAG_IPOD, item.mId + " item " + mService.getNowPlaying(true).mId);
+				} catch (RemoteException e) {
+					e.printStackTrace();
+				}
+				play(position);
+				mAdapter.setSelected(position);
+				mAdapter.notifyDataSetChanged();
+			}
+		});
 	}
 
 	/**
@@ -403,14 +476,19 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 	 */
 	private void updateNowPlaying(NowPlaying nowing) {
 		if (nowing == null || mService == null) {
-			Log.d(Constant.TAG_IPOD, "NowPlaying update error ");
+			Log.d(Constant.TAG_IPOD, "NowPlaying update error " + "nowing " + nowing + "mService " + mService);
 			return;
 		}
+		Log.d(Constant.TAG_IPOD, "NowPlaying" + "nowing " + nowing.mId);
 		miPodSeekBar.setMax(nowing.mPlaybackDurationInMilliseconds);
 		miPodSeekBar.setProgress(nowing.mPlaybackElapsedTimeInMilliseconds);
 		mSongText.setText(nowing.mTitle == null ? getResources().getString(R.string.txt_song) : nowing.mTitle);
 		mSingerText.setText(nowing.mArtist == null ? getResources().getString(R.string.txt_singer) : nowing.mArtist);
 		mAlbumText.setText(nowing.mAlbum == null ? getResources().getString(R.string.txt_album) : nowing.mAlbum);
+		mAllProgress.setText("-" + Utils.formatetime(nowing.mPlaybackDurationInMilliseconds - nowing.mPlaybackElapsedTimeInMilliseconds));
+		mCurrentProgress.setText(Utils.formatetime(nowing.mPlaybackElapsedTimeInMilliseconds));
+
+		mPlayStatus.setImageResource(nowing.mPlaybackStatus ? R.drawable.btn_music_pause : R.drawable.btn_music_play);
 	}
 
 	/**
@@ -559,5 +637,14 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		play(0);
+	}
+
+	private void play(int position) {
+		String[] Identifiers = new String[mediaItems.size()];
+		for (int i = 0; i < mediaItems.size(); i++) {
+			Identifiers[i] = mediaItems.get(i).mId;
+		}
+		playByList(Identifiers, Identifiers.length, position);
 	}
 }

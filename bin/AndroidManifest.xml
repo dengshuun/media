@@ -72,19 +72,21 @@
             android:name="com.hwatong.usbpicture.UsbPictureActivity"
             android:label="@string/title_activity_usb_picture"
             android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="com.hwatong.media.USB_PICTURE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.hwatong.usbvideo.UsbVideoActivity"
             android:label="@string/title_activity_usb_vedio"
             android:launchMode="singleInstance" >
-        </activity>
-        <activity
-            android:name="com.hwatong.usbvideo.UsbVideoPlayActivity"
-            android:label="@string/title_activity_usb_video_play" >
-        </activity>
-        <activity
-            android:name="com.hwatong.usbpicture.UsbPicturePlayActivity"
-            android:label="@string/title_activity_usb_picture_play" >
+            <intent-filter>
+                <action android:name="com.hwatong.media.USB_VIDEO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

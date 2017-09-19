@@ -1,0 +1,362 @@
+[
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\usb_picture_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\usb_picture_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_music_play_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_music_play_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bottom_bar_dividing_line.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bottom_bar_dividing_line.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\folder_random_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\folder_random_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\media_right_bg.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\media_right_bg.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\back_press.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\back_press.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\system_main_back.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\system_main_back.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bg_picture_top.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bg_picture_top.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\folder_cycle_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\folder_cycle_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\folder_random_red.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\folder_random_red.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\usb_music_icon_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\usb_music_icon_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\seekbar_thumb.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\seekbar_thumb.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_music_pause_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_music_pause_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\media_mian_app_bg.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\media_mian_app_bg.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\media_list_item_pressed.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\media_list_item_pressed.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\paly_bg.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\paly_bg.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\img_background.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\img_background.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\img_folder_list_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\img_folder_list_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\usb_right_bg.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\usb_right_bg.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\seekbar_progress_red.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\seekbar_progress_red.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\media_list_playing.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\media_list_playing.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\scrollbar_bg.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\scrollbar_bg.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\black_bg.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\black_bg.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ipod_right_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\ipod_right_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_picture_resize_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_picture_resize_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\space_line.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\space_line.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bg_calling.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bg_calling.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bg_loading_dialog.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bg_loading_dialog.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\usb_icon_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\usb_icon_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btmusic_icon_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btmusic_icon_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\hang_up_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\hang_up_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bg_hang_up_normal.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bg_hang_up_normal.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\folder_cycle.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\folder_cycle.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bg_folder_path.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bg_folder_path.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\seekbar_normal.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\seekbar_normal.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_picture_resize_red.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_picture_resize_red.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\single_cycle_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\single_cycle_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\picture_grid_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\picture_grid_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_folder_pressed.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_folder_pressed.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\pause.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\pause.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_music_next_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_music_next_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_music_play_red.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_music_play_red.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\usb_music_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\usb_music_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\usb_picture_icon_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\usb_picture_icon_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bg_picture_bottom_control.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bg_picture_bottom_control.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\usb_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\usb_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ipod_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\ipod_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bottom_bar_pressed.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bottom_bar_pressed.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\picture_icon_small.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\picture_icon_small.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\next.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\next.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bg_call_pressed.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bg_call_pressed.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\folder_grid_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\folder_grid_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\single_cycle.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\single_cycle.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bg_media_shading.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bg_media_shading.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bg_call_normal.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bg_call_normal.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_music_pause_red.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_music_pause_red.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\folder_cycle_red.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\folder_cycle_red.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\usb_video_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\usb_video_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bg_media_bottom_bar.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bg_media_bottom_bar.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_music_pre_red.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_music_pre_red.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ipod_icon_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\ipod_icon_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\back.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\back.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_back.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_back.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\call_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\call_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\play_in_order_red.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\play_in_order_red.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\folder_item_pressed.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\folder_item_pressed.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\img_folder_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\img_folder_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\picture_grid_frame.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\picture_grid_frame.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\music_icon_small.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\music_icon_small.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btmusic_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btmusic_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_music_next_red.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_music_next_red.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\folder_random.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\folder_random.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_vedio_full_screen_red.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_vedio_full_screen_red.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\folder_icon_back.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\folder_icon_back.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\img_folder_thumbnails_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\img_folder_thumbnails_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bg_hang_up_pressed.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bg_hang_up_pressed.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\back_normal.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\back_normal.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_music_pre_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_music_pre_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\usb_video_icon_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\usb_video_icon_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\single_cycle_red.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\single_cycle_red.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\scrollbar_thumb.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\scrollbar_thumb.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bluetooth_icon.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bluetooth_icon.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bg_bottom_bar.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\bg_bottom_bar.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\previous.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\previous.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\folder_icon_normal.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\folder_icon_normal.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_vedio_full_screen_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\btn_vedio_full_screen_gray.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\img_interval_line.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\img_interval_line.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\media_mian_app_bg_red.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\media_mian_app_bg_red.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\play_in_order_gray.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-hdpi\\play_in_order_gray.png"
+    }
+]

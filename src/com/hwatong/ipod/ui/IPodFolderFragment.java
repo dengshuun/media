@@ -1,6 +1,7 @@
 package com.hwatong.ipod.ui;
 
 import java.util.List;
+
 import com.hwatong.ipod.Album;
 import com.hwatong.ipod.Artist;
 import com.hwatong.ipod.Genre;
@@ -10,6 +11,7 @@ import com.hwatong.media.common.R;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +39,7 @@ public class IPodFolderFragment extends Fragment implements OnClickFolderListene
 		mView = inflater.inflate(R.layout.fragment_folder, container, false);
 		mPathView = (TextView) mView.findViewById(R.id.folder_path);
 		mListView = (ListView) mView.findViewById(R.id.list_folder);
+		mListView.setSelector(R.drawable.media_list_item_selector);
 		update(mPath);
 		return mView;
 	}
@@ -96,7 +99,12 @@ public class IPodFolderFragment extends Fragment implements OnClickFolderListene
 					mContentUI = new String[mContentData.size()];
 					for (int i = 0; i < mContentData.size(); i++) {
 						Genre genre = (Genre) mContentData.get(i);
-						mContentUI[i] = genre.mName;
+						Log.d("111", "mName :" + genre.mName + ".");
+						if (genre.mName == null || genre.mName.equals(" ")) {
+							mContentUI[i] = getResources().getString(R.string.music_unknown);
+						} else {
+							mContentUI[i] = genre.mName;
+						}
 					}
 				}
 			} else if (type.equals(Constant.ARTIST)) {
@@ -107,7 +115,12 @@ public class IPodFolderFragment extends Fragment implements OnClickFolderListene
 					mContentUI = new String[mContentData.size()];
 					for (int i = 0; i < mContentData.size(); i++) {
 						Artist artist = (Artist) mContentData.get(i);
-						mContentUI[i] = artist.mName;
+						Log.d("111", "mName :" + artist.mName + ".");
+						if (artist.mName == null || artist.mName.equals(" ")) {
+							mContentUI[i] = getResources().getString(R.string.music_unknown);
+						} else {
+							mContentUI[i] = artist.mName;
+						}
 					}
 				}
 			} else if (type.equals(Constant.ALBUM)) {
@@ -118,7 +131,12 @@ public class IPodFolderFragment extends Fragment implements OnClickFolderListene
 					mContentUI = new String[mContentData.size()];
 					for (int i = 0; i < mContentData.size(); i++) {
 						Album album = (Album) mContentData.get(i);
-						mContentUI[i] = album.mTitle;
+						Log.d("111", "mTitle :" + album.mTitle + ".");
+						if (album.mTitle == null || album.mTitle.equals(" ")) {
+							mContentUI[i] = getResources().getString(R.string.music_unknown);
+						} else {
+							mContentUI[i] = album.mTitle;
+						}
 					}
 				}
 			}

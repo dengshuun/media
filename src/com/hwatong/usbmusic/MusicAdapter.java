@@ -14,7 +14,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hwatong.media.MusicEntry;
+import com.hwatong.music.MusicEntry;
 import com.hwatong.media.common.Constant;
 import com.hwatong.media.common.MediaFile;
 import com.hwatong.media.common.R;

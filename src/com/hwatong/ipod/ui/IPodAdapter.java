@@ -5,7 +5,6 @@ import java.util.List;
 
 import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hwatong.ipod.MediaItem;
+import com.hwatong.ipod.NowPlaying;
 import com.hwatong.media.common.R;
-import com.hwatong.music.NowPlaying;
 
-public class IPodAdapter extends BaseAdapter{
+public class IPodAdapter extends BaseAdapter {
 	private final Context mContext;
 	NowPlaying mNowPlaying = null;
 	List<MediaItem> list = new ArrayList<MediaItem>();
@@ -26,10 +25,9 @@ public class IPodAdapter extends BaseAdapter{
 	 */
 	private int mSelectedIndex = -1;
 
-
 	public IPodAdapter(Context conrext, List<MediaItem> list) {
 		mContext = conrext;
-		this.list = list ;
+		this.list = list;
 	}
 
 	public void setSelected(int selectedIndex) {
@@ -52,10 +50,12 @@ public class IPodAdapter extends BaseAdapter{
 	public long getItemId(int i) {
 		return i;
 	}
-    /**
-     * 设置当前正在播放的歌曲
-     * @param nowPlaying
-     */
+
+	/**
+	 * 设置当前正在播放的歌曲
+	 * 
+	 * @param nowPlaying
+	 */
 	public void setmNowPlaying(NowPlaying nowPlaying) {
 		this.mNowPlaying = nowPlaying;
 	}
@@ -74,7 +74,7 @@ public class IPodAdapter extends BaseAdapter{
 			myViewHolder = (ViewHolder) convertView.getTag();
 		}
 
-		if (position == mSelectedIndex) {
+		if (mNowPlaying != null && list.get(position).mId == mNowPlaying.mId || mSelectedIndex == position) {
 			myViewHolder.isPlaying.setVisibility(View.VISIBLE);
 			myViewHolder.mName.setEllipsize(TextUtils.TruncateAt.MARQUEE);
 			myViewHolder.mName.setTextColor(android.graphics.Color.parseColor("#ff0000"));

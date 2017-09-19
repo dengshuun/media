@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\anim\\loading_animation.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\anim\\loading_animation.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\anim\\popup_show.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\anim\\popup_show.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\anim\\popup_hide_up.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\anim\\popup_hide_up.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\anim\\cd_rotate.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\anim\\cd_rotate.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\anim\\popup_show_up.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\anim\\popup_show_up.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\anim\\popup_hide.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\anim\\popup_hide.xml"
+    }
+]

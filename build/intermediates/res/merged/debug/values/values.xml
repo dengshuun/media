@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#00eeee</color>
+    <color name="delete_bt_down">#ffffff</color>
+    <color name="delete_bt_up">#000000</color>
+    <color name="delete_title">#041322</color>
+    <color name="jieshu">#ffffff</color>
+    <color name="kaishi">#2F4F4F</color>
+    <color name="red">#FF0000</color>
+    <color name="solid_black">#000000</color>
+    <color name="solid_gray">#C0C0C0</color>
+    <color name="text">#8c8d92</color>
+    <color name="text_light">#00f7fd</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_blue">#5500eeee</color>
+    <color name="txt_gray">#333333</color>
+    <color name="white">#ffffff</color>
+    <declare-styleable name="PowerImageView"><attr format="boolean" name="auto_play"/></declare-styleable>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_36">36sp</dimen>
+    <dimen name="text_size_48">48sp</dimen>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">多媒体</string>
+    <string name="folder">文件夹</string>
+    <string name="folder_list">列表</string>
+    <string name="folder_thumbnails">缩略图</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="ipod_album">Album</string>
+    <string name="ipod_artist">Artist</string>
+    <string name="ipod_song_name">Song Name</string>
+    <string name="music_unknown">未知音乐</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_usb_folder_fragment">UsbFolderFragment</string>
+    <string name="title_activity_usb_music">USB</string>
+    <string name="title_activity_usb_music_main">UsbMusicMain</string>
+    <string name="title_activity_usb_music_main_fragment">UsbMusicMainFragment</string>
+    <string name="title_activity_usb_picture">UsbPictureActivity</string>
+    <string name="title_activity_usb_picture_play">UsbPicturePlayActivity</string>
+    <string name="title_activity_usb_vedio">UsbVedioActivity</string>
+    <string name="title_activity_usb_video_play">UsbVideoPlayActivity</string>
+    <string name="txt_album">未知专辑</string>
+    <string name="txt_btmusic">蓝牙音乐</string>
+    <string name="txt_ipod">iPOD</string>
+    <string name="txt_loading">正在搜索…</string>
+    <string name="txt_music">音频</string>
+    <string name="txt_no_music">无音乐文件</string>
+    <string name="txt_no_picture">无图片文件</string>
+    <string name="txt_no_video">无视频文件</string>
+    <string name="txt_picture">图片</string>
+    <string name="txt_singer">未知歌手</string>
+    <string name="txt_song">无音乐</string>
+    <string name="txt_time">00:00:00</string>
+    <string name="txt_usb">USB</string>
+    <string name="txt_video">视频</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+		<!-- <item name="android:windowIsTranslucent">true</item>
+ 					-->
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+    </style>
+    <style name="LoadingDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- <item name="android:windowIsTranslucent">true</item> -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

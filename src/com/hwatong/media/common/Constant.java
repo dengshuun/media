@@ -60,7 +60,7 @@ public class Constant {
 	/**
 	 * 媒体根目录
 	 */
-	public static final String ROOT_DIR_PATH = "/mnt/udisk";
+	public static final String ROOT_DIR_PATH = "/mnt/udisk2";
 	public static final String MEDIA_ROOT_DIR_PATH = "根目录//";
 	
 	/**

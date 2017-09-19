@@ -35,8 +35,8 @@ public class ThumbnailsLoader {
 	private final int cacheSize = maxMemory / 8;
 	private Map<Integer, Bitmap> mBitMap = new HashMap<Integer, Bitmap>();
 
-	private int viewWidth = 120;
-	private int viewHeight = 120;
+	private int viewWidth = 150;
+	private int viewHeight = 150;
 
 	public ThumbnailsLoader(Context context) {
 		mMemoryCache = new LruCache<String, Bitmap>(cacheSize) {

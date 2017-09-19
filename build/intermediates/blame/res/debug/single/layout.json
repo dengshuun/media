@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\activity_usb_picture.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\activity_usb_picture.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\media_list.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\media_list.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\search_dialog.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\search_dialog.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ipod_music.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\activity_ipod_music.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\folder_grid_item.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\folder_grid_item.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_folder.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\fragment_folder.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\loading_dialog.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\loading_dialog.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\activity_usb_music.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\activity_usb_music.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\music_list_empty.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\music_list_empty.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\activity_bluetooth_music.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\activity_bluetooth_music.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\activity_usb_video.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\activity_usb_video.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\gif.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\gif.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\folder_list.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\folder_list.xml"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\ipod_folder_list.xml",
+        "source": "D:\\workspace\\MediaUI\\res\\layout\\ipod_folder_list.xml"
+    }
+]

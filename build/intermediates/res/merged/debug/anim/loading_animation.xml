@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:shareInterpolator="false" xmlns:android="http://schemas.android.com/apk/res/android">
+    <rotate 
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fromDegrees="0"
+        android:toDegrees="+360"
+        android:duration="1500"
+        android:startOffset="-1"
+        android:repeatMode="restart"
+        android:repeatCount="-1"/>
+</set>
+
+<!-- <?xml version="1.0" encoding="utf-8"?>  
+  
+    根标签为animation-list，其中oneshot代表着是否只展示一遍，设置为false会不停的循环播放动画  
+    根标签下，通过item标签对动画中的每一个图片进行声明  
+    android:duration 表示展示所用的该图片的时间长度  
+  
+<animation-list  
+  xmlns:android="http://schemas.android.com/apk/res/android"  
+  android:oneshot="false"  
+  >  
+    <item android:drawable="@drawable/seach2" android:duration="150"></item>  
+    <item android:drawable="@drawable/seach3" android:duration="150"></item>  
+    <item android:drawable="@drawable/seach4" android:duration="150"></item>  
+    <item android:drawable="@drawable/seach5" android:duration="150"></item>  
+    <item android:drawable="@drawable/seach6" android:duration="150"></item>  
+    <item android:drawable="@drawable/seach7" android:duration="150"></item> 
+    <item android:drawable="@drawable/seach8" android:duration="150"></item> 
+    <item android:drawable="@drawable/seach9" android:duration="150"></item> 
+    <item android:drawable="@drawable/seach10" android:duration="150"></item> 
+    <item android:drawable="@drawable/seach11" android:duration="150"></item> 
+</animation-list>  -->

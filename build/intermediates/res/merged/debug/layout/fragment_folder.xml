@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+
+    <TextView
+        android:id="@+id/folder_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_folder_path"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="48dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/text_size_24" />
+
+    <ListView
+        android:id="@+id/list_folder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/folder_path"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarThumbVertical="@drawable/scrollbar_thumb"
+        android:scrollbarTrackVertical="@drawable/scrollbar_bg" />
+
+    <GridView
+        android:id="@+id/grid_folder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/folder_path"
+        android:listSelector="@drawable/picture_grid_selector"
+        android:numColumns="5"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarThumbVertical="@drawable/scrollbar_thumb"
+        android:scrollbarTrackVertical="@drawable/scrollbar_bg"
+        android:verticalSpacing="10dp"
+        android:visibility="gone" >
+    </GridView>
+
+</RelativeLayout>

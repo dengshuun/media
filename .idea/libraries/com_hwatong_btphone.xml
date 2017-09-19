@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="com.hwatong.btphone">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../PlatformAdapter/libs/com.hwatong.btphone.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
