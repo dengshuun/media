@@ -127,7 +127,7 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
         mSurfaceView.getHolder().addCallback(this);// Surface回调函数：
         mSurfaceView.setKeepScreenOn(true);
 
-        mAudioManager.requestAudioFocus(mAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
+        mAudioManager.requestAudioFocus(mAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
         mAudioManager.registerMediaButtonEventReceiver(new ComponentName(getPackageName(), MediaButtonReceiver.class.getName()));
         timeUpdateHandler.sendEmptyMessageDelayed(MSG_TIME_TOOL, 3000);
     }
@@ -567,7 +567,7 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
         if (mVideoFilePath == null || mSurfaceHolder == null)
             return false;
 
-        mAudioManager.requestAudioFocus(mAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
+        mAudioManager.requestAudioFocus(mAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
         mAudioManager.registerMediaButtonEventReceiver(new ComponentName(getPackageName(), MediaButtonReceiver.class.getName()));
 
         release();
@@ -606,7 +606,7 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
         if (Constant.DEBUG)
             Log.d(Constant.TAG_USB_VIDEO, "resume");
 
-        mAudioManager.requestAudioFocus(mAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
+        mAudioManager.requestAudioFocus(mAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
         mAudioManager.registerMediaButtonEventReceiver(new ComponentName(getPackageName(), MediaButtonReceiver.class.getName()));
 
         if (mMediaPlayer != null) {

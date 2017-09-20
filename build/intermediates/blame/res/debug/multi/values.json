@@ -283,56 +283,84 @@
                     "startLine": 26,
                     "startColumn": 4,
                     "startOffset": 1210,
-                    "endColumn": 40,
-                    "endOffset": 1246
+                    "endColumn": 42,
+                    "endOffset": 1248
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 42,
+                        "endOffset": 97
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 1251,
-                    "endColumn": 38,
-                    "endOffset": 1285
+                    "startOffset": 1253,
+                    "endColumn": 41,
+                    "endOffset": 1290
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 1737,
+                        "endColumn": 41,
+                        "endOffset": 1774
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 1290,
-                    "endColumn": 42,
-                    "endOffset": 1328
+                    "startOffset": 1295,
+                    "endColumn": 44,
+                    "endOffset": 1335
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 1838,
+                        "endColumn": 44,
+                        "endOffset": 1878
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 1333,
-                    "endColumn": 49,
-                    "endOffset": 1378
+                    "startOffset": 1340,
+                    "endColumn": 56,
+                    "endOffset": 1392
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 4,
+                        "startOffset": 1780,
+                        "endColumn": 56,
+                        "endOffset": 1832
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 1383,
+                    "startOffset": 1397,
                     "endColumn": 52,
-                    "endOffset": 1431
+                    "endOffset": 1445
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -342,9 +370,9 @@
                 "to": {
                     "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 1436,
+                    "startOffset": 1450,
                     "endColumn": 44,
-                    "endOffset": 1476
+                    "endOffset": 1490
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -354,9 +382,9 @@
                 "to": {
                     "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 1481,
+                    "startOffset": 1495,
                     "endColumn": 46,
-                    "endOffset": 1523
+                    "endOffset": 1537
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -366,9 +394,9 @@
                 "to": {
                     "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 1528,
+                    "startOffset": 1542,
                     "endColumn": 52,
-                    "endOffset": 1576
+                    "endOffset": 1590
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -378,21 +406,28 @@
                 "to": {
                     "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 1581,
-                    "endColumn": 46,
-                    "endOffset": 1623
+                    "startOffset": 1595,
+                    "endColumn": 55,
+                    "endOffset": 1646
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1129,
+                        "endColumn": 55,
+                        "endOffset": 1180
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 1628,
+                    "startOffset": 1651,
                     "endColumn": 60,
-                    "endOffset": 1684
+                    "endOffset": 1707
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -402,9 +437,9 @@
                 "to": {
                     "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 1689,
+                    "startOffset": 1712,
                     "endColumn": 80,
-                    "endOffset": 1765
+                    "endOffset": 1788
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -414,9 +449,9 @@
                 "to": {
                     "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 1770,
+                    "startOffset": 1793,
                     "endColumn": 56,
-                    "endOffset": 1822
+                    "endOffset": 1845
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -426,9 +461,9 @@
                 "to": {
                     "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 1827,
+                    "startOffset": 1850,
                     "endColumn": 70,
-                    "endOffset": 1893
+                    "endOffset": 1916
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -438,9 +473,9 @@
                 "to": {
                     "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 1898,
+                    "startOffset": 1921,
                     "endColumn": 87,
-                    "endOffset": 1981
+                    "endOffset": 2004
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -450,9 +485,9 @@
                 "to": {
                     "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 1986,
+                    "startOffset": 2009,
                     "endColumn": 73,
-                    "endOffset": 2055
+                    "endOffset": 2078
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -462,9 +497,9 @@
                 "to": {
                     "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 2060,
+                    "startOffset": 2083,
                     "endColumn": 82,
-                    "endOffset": 2138
+                    "endOffset": 2161
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -474,9 +509,9 @@
                 "to": {
                     "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 2143,
+                    "startOffset": 2166,
                     "endColumn": 69,
-                    "endOffset": 2208
+                    "endOffset": 2231
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -486,9 +521,9 @@
                 "to": {
                     "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 2213,
+                    "startOffset": 2236,
                     "endColumn": 78,
-                    "endOffset": 2287
+                    "endOffset": 2310
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -498,9 +533,9 @@
                 "to": {
                     "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 2292,
+                    "startOffset": 2315,
                     "endColumn": 42,
-                    "endOffset": 2330
+                    "endOffset": 2353
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -510,21 +545,28 @@
                 "to": {
                     "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 2335,
-                    "endColumn": 44,
-                    "endOffset": 2375
+                    "startOffset": 2358,
+                    "endColumn": 48,
+                    "endOffset": 2402
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1452,
+                        "endColumn": 48,
+                        "endOffset": 1496
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 2380,
+                    "startOffset": 2407,
                     "endColumn": 41,
-                    "endOffset": 2417
+                    "endOffset": 2444
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -534,81 +576,123 @@
                 "to": {
                     "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 2422,
-                    "endColumn": 45,
-                    "endOffset": 2463
+                    "startOffset": 2449,
+                    "endColumn": 48,
+                    "endOffset": 2493
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 1545,
+                        "endColumn": 54,
+                        "endOffset": 1595
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 2468,
-                    "endColumn": 40,
-                    "endOffset": 2504
+                    "startOffset": 2498,
+                    "endColumn": 43,
+                    "endOffset": 2537
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1084,
+                        "endColumn": 43,
+                        "endOffset": 1123
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 2509,
-                    "endColumn": 46,
-                    "endOffset": 2551
+                    "startOffset": 2542,
+                    "endColumn": 54,
+                    "endOffset": 2592
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1186,
+                        "endColumn": 54,
+                        "endOffset": 1236
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 50,
                     "startColumn": 4,
-                    "startOffset": 2556,
-                    "endColumn": 48,
-                    "endOffset": 2600
+                    "startOffset": 2597,
+                    "endColumn": 58,
+                    "endOffset": 2651
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1242,
+                        "endColumn": 58,
+                        "endOffset": 1296
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 51,
                     "startColumn": 4,
-                    "startOffset": 2605,
-                    "endColumn": 46,
-                    "endOffset": 2647
+                    "startOffset": 2656,
+                    "endColumn": 54,
+                    "endOffset": 2706
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1302,
+                        "endColumn": 54,
+                        "endOffset": 1352
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 2652,
-                    "endColumn": 42,
-                    "endOffset": 2690
+                    "startOffset": 2711,
+                    "endColumn": 47,
+                    "endOffset": 2754
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1403,
+                        "endColumn": 47,
+                        "endOffset": 1446
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 53,
                     "startColumn": 4,
-                    "startOffset": 2695,
+                    "startOffset": 2759,
                     "endColumn": 43,
-                    "endOffset": 2734
+                    "endOffset": 2798
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -618,21 +702,28 @@
                 "to": {
                     "startLine": 54,
                     "startColumn": 4,
-                    "startOffset": 2739,
-                    "endColumn": 40,
-                    "endOffset": 2775
+                    "startOffset": 2803,
+                    "endColumn": 45,
+                    "endOffset": 2844
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 1601,
+                        "endColumn": 45,
+                        "endOffset": 1642
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 55,
                     "startColumn": 4,
-                    "startOffset": 2780,
+                    "startOffset": 2849,
                     "endColumn": 45,
-                    "endOffset": 2821
+                    "endOffset": 2890
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -642,9 +733,9 @@
                 "to": {
                     "startLine": 56,
                     "startColumn": 4,
-                    "startOffset": 2826,
+                    "startOffset": 2895,
                     "endColumn": 39,
-                    "endOffset": 2861
+                    "endOffset": 2930
                 },
                 "from": {
                     "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
@@ -654,96 +745,71 @@
                 "to": {
                     "startLine": 57,
                     "startColumn": 4,
-                    "startOffset": 2866,
-                    "endColumn": 40,
-                    "endOffset": 2902
+                    "startOffset": 2935,
+                    "endColumn": 43,
+                    "endOffset": 2974
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml"
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1358,
+                        "endColumn": 43,
+                        "endOffset": 1397
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 58,
                     "startColumn": 4,
-                    "startOffset": 2907,
-                    "endLine": 64,
+                    "startOffset": 2979,
+                    "endLine": 60,
                     "endColumn": 12,
-                    "endOffset": 3193
+                    "endOffset": 3057
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\styles.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 192,
-                        "endLine": 12,
-                        "endColumn": 12,
-                        "endOffset": 484
-                    }
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\styles.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 65,
+                    "startLine": 61,
                     "startColumn": 4,
-                    "startOffset": 3198,
-                    "endLine": 67,
+                    "startOffset": 3062,
+                    "endLine": 63,
                     "endColumn": 12,
-                    "endOffset": 3353
+                    "endOffset": 3129
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\styles.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 525,
-                        "endLine": 17,
-                        "endColumn": 12,
-                        "endOffset": 682
-                    }
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\styles.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 68,
+                    "startLine": 64,
                     "startColumn": 4,
-                    "startOffset": 3358,
-                    "endLine": 82,
+                    "startOffset": 3134,
+                    "endLine": 77,
                     "endColumn": 12,
-                    "endOffset": 3951
+                    "endOffset": 3577
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\styles.xml",
-                    "position": {
-                        "startLine": 28,
-                        "startColumn": 4,
-                        "startOffset": 1162,
-                        "endLine": 42,
-                        "endColumn": 12,
-                        "endOffset": 1769
-                    }
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\styles.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 83,
+                    "startLine": 78,
                     "startColumn": 4,
-                    "startOffset": 3956,
-                    "endLine": 90,
+                    "startOffset": 3582,
+                    "endLine": 85,
                     "endColumn": 12,
-                    "endOffset": 4413
+                    "endOffset": 3978
                 },
                 "from": {
-                    "file": "D:\\workspace\\MediaUI\\res\\values\\styles.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 690,
-                        "endLine": 26,
-                        "endColumn": 12,
-                        "endOffset": 1154
-                    }
+                    "file": "D:\\workspace\\MediaUI\\res\\values\\styles.xml"
                 }
             }
         ]

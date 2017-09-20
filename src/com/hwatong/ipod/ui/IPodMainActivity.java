@@ -434,8 +434,7 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 
 	/**
 	 * 更新歌曲列表
-	 * 
-	 * @param playList
+	 *
 	 */
 	private void refreshPlayList() {
 		if (mediaItems == null) {
@@ -619,7 +618,7 @@ public class IPodMainActivity extends Activity implements OnClickListener {
 
 	/**
 	 * @param type
-	 * @param value
+	 * @param id
 	 */
 	public void setPlayList(String type, String id) {
 		try {
