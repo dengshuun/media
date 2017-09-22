@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,24 +15,17 @@ import android.widget.TextView;
 
 import com.hwatong.ipod.MediaItem;
 import com.hwatong.ipod.NowPlaying;
+import com.hwatong.media.common.Constant;
 import com.hwatong.media.common.R;
 
 public class IPodAdapter extends BaseAdapter {
 	private final Context mContext;
-	NowPlaying mNowPlaying = null;
+    private NowPlaying mNowPlaying = null;
 	List<MediaItem> list = new ArrayList<MediaItem>();
-	/**
-	 * 被选中的item
-	 */
-	private int mSelectedIndex = -1;
 
 	public IPodAdapter(Context conrext, List<MediaItem> list) {
 		mContext = conrext;
 		this.list = list;
-	}
-
-	public void setSelected(int selectedIndex) {
-		this.mSelectedIndex = selectedIndex;
 	}
 
 	@Override
@@ -74,7 +68,7 @@ public class IPodAdapter extends BaseAdapter {
 			myViewHolder = (ViewHolder) convertView.getTag();
 		}
 
-		if (mNowPlaying != null && list.get(position).mId == mNowPlaying.mId || mSelectedIndex == position) {
+		if (mNowPlaying != null && list.get(position).mId.equals(mNowPlaying.mId)) {
 			myViewHolder.isPlaying.setVisibility(View.VISIBLE);
 			myViewHolder.mName.setEllipsize(TextUtils.TruncateAt.MARQUEE);
 			myViewHolder.mName.setTextColor(android.graphics.Color.parseColor("#ff0000"));

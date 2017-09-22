@@ -151,7 +151,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="70dp"
                     android:layout_toRightOf="@+id/ipod_music_next"
-                    android:background="@drawable/folder_cycle_selector" />
+                    android:background="@drawable/folder_cycle_gray" />
             </RelativeLayout>
         </LinearLayout>
 

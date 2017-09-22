@@ -56,10 +56,10 @@ public class IPodFolderListAdapter extends BaseAdapter{
 			convertView = LayoutInflater.from(mContext).inflate(R.layout.ipod_folder_list, parent, false);
 			convertView.setTag(viewHolder);
 			viewHolder.name = (TextView) convertView.findViewById(R.id.folder_item_name);
-			viewHolder.name.setText(item[position]);
 		} else {
 			viewHolder = (ViewHolder) convertView.getTag();
 		}
+		viewHolder.name.setText(item[position]);
 		return convertView;
 	}
 	

@@ -99,7 +99,6 @@ public class IPodFolderFragment extends Fragment implements OnClickFolderListene
 					mContentUI = new String[mContentData.size()];
 					for (int i = 0; i < mContentData.size(); i++) {
 						Genre genre = (Genre) mContentData.get(i);
-						Log.d("111", "mName :" + genre.mName + ".");
 						if (genre.mName == null || genre.mName.equals(" ")) {
 							mContentUI[i] = getResources().getString(R.string.music_unknown);
 						} else {
@@ -115,7 +114,6 @@ public class IPodFolderFragment extends Fragment implements OnClickFolderListene
 					mContentUI = new String[mContentData.size()];
 					for (int i = 0; i < mContentData.size(); i++) {
 						Artist artist = (Artist) mContentData.get(i);
-						Log.d("111", "mName :" + artist.mName + ".");
 						if (artist.mName == null || artist.mName.equals(" ")) {
 							mContentUI[i] = getResources().getString(R.string.music_unknown);
 						} else {
