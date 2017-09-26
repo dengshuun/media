@@ -177,7 +177,7 @@ containing a value of this type.
         public static final int usb_video_selector=0x7f020078;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0066;
+        public static final int action_settings=0x7f0a0064;
         public static final int btmusic_layout=0x7f0a001c;
         public static final int btn_back=0x7f0a0004;
         public static final int btn_folder=0x7f0a002e;
@@ -225,7 +225,6 @@ containing a value of this type.
         public static final int music_control_view=0x7f0a0009;
         public static final int music_control_view2=0x7f0a0029;
         public static final int music_curtime=0x7f0a0026;
-        public static final int music_list_empty=0x7f0a0063;
         public static final int music_next=0x7f0a002c;
         public static final int music_overtime=0x7f0a0028;
         public static final int music_play=0x7f0a002b;
@@ -244,7 +243,6 @@ containing a value of this type.
         public static final int previous=0x7f0a0002;
         public static final int radio_search_layout=0x7f0a005e;
         public static final int right_layout=0x7f0a0020;
-        public static final int search_layout_inner=0x7f0a0064;
         public static final int text_no_music=0x7f0a0031;
         public static final int text_no_picture=0x7f0a0040;
         public static final int text_no_video=0x7f0a0053;
@@ -254,7 +252,7 @@ containing a value of this type.
         public static final int txt_folder_thumbnails=0x7f0a003f;
         public static final int txt_ipod=0x7f0a001f;
         public static final int txt_loading=0x7f0a0060;
-        public static final int txt_radio_search=0x7f0a0065;
+        public static final int txt_radio_search=0x7f0a0063;
         public static final int txt_singer=0x7f0a0024;
         public static final int txt_song=0x7f0a0023;
         public static final int txt_usb=0x7f0a001b;
@@ -295,8 +293,7 @@ containing a value of this type.
         public static final int ipod_folder_list=0x7f03000a;
         public static final int loading_dialog=0x7f03000b;
         public static final int media_list=0x7f03000c;
-        public static final int music_list_empty=0x7f03000d;
-        public static final int search_dialog=0x7f03000e;
+        public static final int search_dialog=0x7f03000d;
     }
     public static final class menu {
         public static final int usb_video_play=0x7f090000;

@@ -255,7 +255,7 @@ public class UsbMusicActivity extends Activity implements OnClickListener {
 		}
 	};
 
-	private final com.hwatong.music.ICallback mMusicListener = new com.hwatong.music.ICallback.Stub() {
+	private final com.hwatong.music.ICallback.Stub mMusicListener = new com.hwatong.music.ICallback.Stub() {
 
 		@Override
 		public void onMediaStatusChanged() {

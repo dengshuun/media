@@ -246,7 +246,7 @@ public class IPodMainActivity extends Activity implements OnClickListener {
             if (intent.hasExtra("tag")) {
                 tag = intent.getStringExtra("tag");
             }
-            if (!tag.equals("iPod")) {
+            if (tag != null && !tag.equals("iPod")) {
                 finish();
             }
         }

@@ -441,9 +441,7 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
                 if (Constant.DEBUG)
                     Log.i(Constant.TAG_USB_VIDEO, "onVolumeStateChanged " + path + ", " + state);
 
-                if (state) {
-
-                } else {
+                if (!state) {
                     finish();
                 }
 
@@ -461,9 +459,7 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
                 if (Constant.DEBUG)
                     Log.i(Constant.TAG_USB_VIDEO, "onPrescanChanged " + path + ", " + state);
 
-                if ("prescan".equals(state)) {
-
-                } else if ("stop".equals(state)) {
+                if ("stop".equals(state)) {
                     finish();
                 }
 

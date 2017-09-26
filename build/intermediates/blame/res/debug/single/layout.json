@@ -36,10 +36,6 @@
         "source": "D:\\workspace\\MediaUI\\res\\layout\\activity_usb_music.xml"
     },
     {
-        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\music_list_empty.xml",
-        "source": "D:\\workspace\\MediaUI\\res\\layout\\music_list_empty.xml"
-    },
-    {
         "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\layout\\activity_bluetooth_music.xml",
         "source": "D:\\workspace\\MediaUI\\res\\layout\\activity_bluetooth_music.xml"
     },

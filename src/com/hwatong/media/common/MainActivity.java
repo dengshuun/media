@@ -4,7 +4,6 @@ import com.hwatong.btmusic.NowPlaying;
 import com.hwatong.btmusic.ui.BluetoothMusicActivity;
 import com.hwatong.ipod.ui.IPodMainActivity;
 import com.hwatong.media.ICallback;
-import com.hwatong.media.common.R;
 import com.hwatong.statusbarinfo.aidl.IStatusBarInfo;
 import com.hwatong.usbmusic.UsbMusicActivity;
 import com.hwatong.usbpicture.UsbPictureActivity;
@@ -516,7 +515,9 @@ public class MainActivity extends Activity implements OnClickListener {
                 startActivity(i);
             }
         } else if (v.getId() == R.id.btn_back) {
-            if (txt_usb.getText().equals(this.getString(R.string.txt_usb))) {
+            if (mLoadingDialog.isShowing()) {
+                mLoadingDialog.dismiss();
+            } else if (txt_usb.getText().equals(this.getString(R.string.txt_usb))) {
                 Intent intent = new Intent("com.hwatong.launcher.MAIN");
                 try {
                     startActivity(intent);

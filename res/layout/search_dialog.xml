@@ -1,43 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/radio_search_layout"
-    android:layout_width="1280dp"
-    android:layout_height="480dp">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_radio_update"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_back"
-        android:layout_width="105dp"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:background="@android:color/transparent" />
-
-    <LinearLayout
-        android:id="@+id/search_layout_inner"
+    <ProgressBar
+        android:id="@+id/loading_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/bg_radio_update"
-        android:orientation="vertical">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="120dp"
+        android:indeterminateDrawable="@drawable/progress_medium" />
 
-        <ProgressBar
-            android:id="@+id/loading_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="120dp"
-            android:indeterminateDrawable="@drawable/progress_medium" />
+    <TextView
+        android:id="@+id/txt_radio_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="@string/txt_loading"
+        android:textColor="@android:color/white"
+        android:textSize="32sp" />
 
-        <TextView
-            android:id="@+id/txt_radio_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:text="@string/txt_loading"
-            android:textColor="@android:color/white"
-            android:textSize="32sp" />
-    </LinearLayout>
-
-
-</RelativeLayout>
+</LinearLayout>
