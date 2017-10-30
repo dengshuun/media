@@ -32,7 +32,9 @@
     <string name="txt_song">无音乐</string>
     <string name="txt_singer">未知歌手</string>
     <string name="txt_album">未知专辑</string>
+    <string name="root_dir_path">根目录//</string>
     <string name="folder">文件夹</string>
+    <string name="upper_level">上一级</string>
     <string name="folder_thumbnails">缩略图</string>
     <string name="folder_list">列表</string>
     <string name="txt_time">00:00:00</string>

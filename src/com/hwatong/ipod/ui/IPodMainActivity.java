@@ -304,6 +304,7 @@ public class IPodMainActivity extends Activity implements OnClickListener {
             getFragmentManager().beginTransaction().hide(mIPodFolderFragment).commit();
             mMainLayout.setVisibility(View.VISIBLE);
             mFloderIcon.setImageResource(R.drawable.img_folder_icon);
+            mFlodertxt.setText(R.string.folder);
             mFloderIcon.setVisibility(View.VISIBLE);
             mFlodertxt.setVisibility(View.VISIBLE);
         }
@@ -324,8 +325,16 @@ public class IPodMainActivity extends Activity implements OnClickListener {
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    protected void onPause() {
+        super.onPause();
+        if (mService != null) {
+            try {
+                mService.unregisterCallback(mCallback);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+        mService = null;
         unbindService(mServiceConnection);
         unregisterReceiver(mReceiver);
         unbindService(statusBarConnection);
@@ -421,6 +430,7 @@ public class IPodMainActivity extends Activity implements OnClickListener {
         } else {
             mFloderIcon.setVisibility(View.VISIBLE);
             mFloderIcon.setImageResource(R.drawable.folder_icon_back);
+            mFlodertxt.setText(R.string.upper_level);
             mFlodertxt.setVisibility(View.VISIBLE);
         }
     }
@@ -471,8 +481,10 @@ public class IPodMainActivity extends Activity implements OnClickListener {
             return;
         }
         Log.d(Constant.TAG_IPOD, "NowPlaying" + "nowing " + nowing.mId);
-        mAdapter.setmNowPlaying(nowing);
-        mAdapter.notifyDataSetChanged();
+        if (nowing != null && mService != null && mAdapter != null) {
+            mAdapter.setmNowPlaying(nowing);
+            mAdapter.notifyDataSetChanged();
+        }
         miPodSeekBar.setMax(nowing.mPlaybackDurationInMilliseconds);
         miPodSeekBar.setProgress(nowing.mPlaybackElapsedTimeInMilliseconds);
         mSongText.setText(nowing.mTitle == null ? getResources().getString(R.string.txt_song) : nowing.mTitle);
@@ -603,7 +615,6 @@ public class IPodMainActivity extends Activity implements OnClickListener {
                 Log.d(Constant.TAG_IPOD, "count:" + count);
                 for (int i = 0; i < count; i++) {
                     list.add(mService.getMediaItem(i));
-                    Log.d(Constant.TAG_IPOD, mService.getMediaItem(i).mTitle);
                 }
             } catch (RemoteException e) {
                 e.printStackTrace();

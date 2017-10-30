@@ -32,7 +32,9 @@
     <string name="txt_song">No music</string>
     <string name="txt_singer">未知歌手</string>
     <string name="txt_album">未知专辑</string>
+    <string name="root_dir_path">UDISK//</string>
     <string name="folder">Folder</string>
+    <string name="upper_level">上一级</string>
     <string name="folder_thumbnails">Thumbnails</string>
     <string name="folder_list">List</string>
     <string name="txt_time">00:00:00</string>

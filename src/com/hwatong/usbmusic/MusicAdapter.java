@@ -25,7 +25,11 @@ public class MusicAdapter extends BaseAdapter {
 	private final Context mContext;
 	String mFilePath;
 	NowPlaying mNowPlaying = null;
-	private final List<MusicEntry> mMusicDataList = new ArrayList<MusicEntry>();
+	private List<MusicEntry> mMusicDataList = new ArrayList<MusicEntry>();
+
+	public void setmMusicDataList(List<MusicEntry> mMusicDataList) {
+		this.mMusicDataList = mMusicDataList;
+	}
 
 	private int mSelectedIndex = -1;
 
@@ -64,8 +68,10 @@ public class MusicAdapter extends BaseAdapter {
 	public void notifyNowPlayingReceived() {
 		if (mNowPlaying != null) {
 			int position = getSongListPosition(mNowPlaying.mId);
-			mSelectedIndex = position;
-			this.notifyDataSetChanged();
+			if (mSelectedIndex != position) {
+				mSelectedIndex = position;
+				this.notifyDataSetChanged();
+			}
 		}
 	}
 

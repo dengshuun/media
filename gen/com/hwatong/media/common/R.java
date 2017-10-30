@@ -312,14 +312,15 @@ containing a value of this type.
     public static final class string {
         public static final int action_settings=0x7f07000e;
         public static final int app_name=0x7f070000;
-        public static final int folder=0x7f07001d;
-        public static final int folder_list=0x7f07001f;
-        public static final int folder_thumbnails=0x7f07001e;
+        public static final int folder=0x7f07001e;
+        public static final int folder_list=0x7f070021;
+        public static final int folder_thumbnails=0x7f070020;
         public static final int hello_world=0x7f07000a;
         public static final int ipod_album=0x7f07000b;
         public static final int ipod_artist=0x7f07000c;
         public static final int ipod_song_name=0x7f07000d;
         public static final int music_unknown=0x7f070011;
+        public static final int root_dir_path=0x7f07001d;
         public static final int title_activity_main=0x7f070001;
         public static final int title_activity_usb_folder_fragment=0x7f070005;
         public static final int title_activity_usb_music=0x7f070002;
@@ -340,9 +341,10 @@ containing a value of this type.
         public static final int txt_picture=0x7f070016;
         public static final int txt_singer=0x7f07001b;
         public static final int txt_song=0x7f07001a;
-        public static final int txt_time=0x7f070020;
+        public static final int txt_time=0x7f070022;
         public static final int txt_usb=0x7f07000f;
         public static final int txt_video=0x7f070015;
+        public static final int upper_level=0x7f07001f;
     }
     public static final class style {
         /** 

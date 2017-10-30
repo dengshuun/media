@@ -35,6 +35,7 @@ import android.os.RemoteException;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -76,6 +77,7 @@ public class UsbPictureActivity extends Activity implements OnClickListener {
     private ImageView ivPictureNext;
     private ImageView ivFolderIcon;
     private ImageView ivFolderThumbnailsIcon;
+    private TextView tvFolder;
     private TextView tvFolderThumbnails;
     private Button btnPictureFullScreen;
     private TextView mNoPictureFile;
@@ -127,6 +129,7 @@ public class UsbPictureActivity extends Activity implements OnClickListener {
         mPictureList = (ListView) findViewById(R.id.list_picture);
         mFolder = (LinearLayout) findViewById(R.id.btn_folder);
         mFolderThumbnails = (LinearLayout) findViewById(R.id.btn_folder_thumbnails);
+        tvFolder = (TextView) findViewById(R.id.txt_folder);
         tvFolderThumbnails = (TextView) findViewById(R.id.txt_folder_thumbnails);
         btnBack = (RelativeLayout) findViewById(R.id.btn_back);
         tvFileName = (TextView) findViewById(R.id.file_name);
@@ -556,6 +559,7 @@ public class UsbPictureActivity extends Activity implements OnClickListener {
                     mTransaction.hide(mFolderFragment).commit();
                     mFolderThumbnails.setVisibility(View.GONE);
                     ivFolderIcon.setImageResource(R.drawable.img_folder_icon);
+                    tvFolder.setText(R.string.folder);
                     timeUpdateHandler.removeMessages(MSG_TIME_TOOL);
                     timeUpdateHandler.removeMessages(MSG_VIEWPAGER_NOTIFY);
                     timeUpdateHandler.sendEmptyMessage(MSG_VIEWPAGER_NOTIFY);
@@ -580,29 +584,11 @@ public class UsbPictureActivity extends Activity implements OnClickListener {
                 break;
 
             case R.id.picture_previous:
-                // if (mPictureIsPlaying) {
-                // removeUpdate();
-                // }
-                if (mPictureAdapter.getCount() != 0) {
-                    if (mNowPlayPosition != 0) {
-                        mNowPlayPosition = (mNowPlayPosition - 1) % mPictureAdapter.getCount();
-                    } else {
-                        mNowPlayPosition = mPictureAdapter.getCount() - 1;
-                    }
-                    mPictureAdapter.setmNowPlayPosition(mNowPlayPosition);
-                    pictureMoveTo(mNowPlayPosition, true);
-                }
+            	prePicture();
                 break;
 
             case R.id.picture_next:
-                // if (mPictureIsPlaying) {
-                // removeUpdate();
-                // }
-                if (mPictureAdapter.getCount() != 0) {
-                    mNowPlayPosition = (mNowPlayPosition + 1) % mPictureAdapter.getCount();
-                    mPictureAdapter.setmNowPlayPosition(mNowPlayPosition);
-                    pictureMoveTo(mNowPlayPosition, true);
-                }
+            	nextPicture();
                 break;
 
             case R.id.picture_play:
@@ -617,6 +603,32 @@ public class UsbPictureActivity extends Activity implements OnClickListener {
                 break;
         }
     }
+
+	private void nextPicture() {
+		// if (mPictureIsPlaying) {
+		// removeUpdate();
+		// }
+		if (mPictureAdapter.getCount() != 0) {
+		    mNowPlayPosition = (mNowPlayPosition + 1) % mPictureAdapter.getCount();
+		    mPictureAdapter.setmNowPlayPosition(mNowPlayPosition);
+		    pictureMoveTo(mNowPlayPosition, true);
+		}
+	}
+
+	private void prePicture() {
+		// if (mPictureIsPlaying) {
+		// removeUpdate();
+		// }
+		if (mPictureAdapter.getCount() != 0) {
+		    if (mNowPlayPosition != 0) {
+		        mNowPlayPosition = (mNowPlayPosition - 1) % mPictureAdapter.getCount();
+		    } else {
+		        mNowPlayPosition = mPictureAdapter.getCount() - 1;
+		    }
+		    mPictureAdapter.setmNowPlayPosition(mNowPlayPosition);
+		    pictureMoveTo(mNowPlayPosition, true);
+		}
+	}
 
     /**
      * 离开全屏模式
@@ -700,6 +712,7 @@ public class UsbPictureActivity extends Activity implements OnClickListener {
             }
         }
         ivFolderIcon.setImageResource(R.drawable.folder_icon_back);
+        tvFolder.setText(R.string.upper_level);
         mFolderThumbnails.setVisibility(View.VISIBLE);
     }
 
@@ -908,6 +921,35 @@ public class UsbPictureActivity extends Activity implements OnClickListener {
         timeUpdateHandler.sendEmptyMessageDelayed(MSG_TIME_TOOL, 3000);
     }
 
+    @Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE) {
+			if (!mPictureIsPlaying) {
+                startUpdate();
+            } else {
+                removeUpdate();
+            }
+			return true;
+		}
+		if (keyCode == KeyEvent.KEYCODE_MEDIA_PLAY) {
+			startUpdate();
+			return true;
+		}
+		if (keyCode == KeyEvent.KEYCODE_MEDIA_PAUSE) {
+			removeUpdate();
+			return true;
+		}
+		if (keyCode == KeyEvent.KEYCODE_MEDIA_PREVIOUS) {
+			prePicture();
+			return true;
+		}
+		if (keyCode == KeyEvent.KEYCODE_MEDIA_NEXT) {
+			nextPicture();
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+    
     /**
      * 工具栏的显示/隐藏
      *

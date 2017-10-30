@@ -108,7 +108,7 @@ public class FolderFragment extends Fragment {
         mListView.setAdapter(mListAdapter);
         mListView.setSelector(R.drawable.folder_item_selector);
         mPathView.setText(mPath.replace(mPath.contains(Constant.ROOT_DIR_PATH + "/") ? Constant.ROOT_DIR_PATH + "/" : Constant.ROOT_DIR_PATH,
-                Constant.IPOD_ROOT_DIR_PATH));
+                getString(R.string.root_dir_path)));
         mListAdapter.notifyDataSetChanged();
         if (type.equals(Type.PICTURE)) {
             mGridAdapter = new FolderGridAdapter(getListFiles(), mContext, type);

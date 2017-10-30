@@ -171,6 +171,7 @@ public class BluetoothMusicActivity extends Activity implements OnClickListener 
             }
             try {
                 mNowPlaying = mService.getNowPlaying();
+                mService.play();
             } catch (RemoteException e) {
                 e.printStackTrace();
             }

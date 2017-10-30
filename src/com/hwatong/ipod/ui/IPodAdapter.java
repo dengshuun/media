@@ -5,7 +5,6 @@ import java.util.List;
 
 import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,6 @@ import android.widget.TextView;
 
 import com.hwatong.ipod.MediaItem;
 import com.hwatong.ipod.NowPlaying;
-import com.hwatong.media.common.Constant;
 import com.hwatong.media.common.R;
 
 public class IPodAdapter extends BaseAdapter {

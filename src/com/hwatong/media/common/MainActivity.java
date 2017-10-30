@@ -294,8 +294,8 @@ public class MainActivity extends Activity implements OnClickListener {
             }
 
             try {
-                if (mMediaService.getUsbState(Constant.ROOT_DIR_PATH).equals("mounted")) {
-                    Log.d(TAG, "mMediaService.getUsbState: " + mMediaService.getUsbState(Constant.ROOT_DIR_PATH));
+                if (mMediaService.getVolumeState(Constant.ROOT_DIR_PATH)) {
+                    Log.d(TAG, "mMediaService.getVolumeState: " + mMediaService.getVolumeState(Constant.ROOT_DIR_PATH));
                     isUsbAvailable = true;
                     mHandler.removeMessages(MSG_SET_USB_ENABLE);
                     mHandler.sendEmptyMessage(MSG_SET_USB_ENABLE);
