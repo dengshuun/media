@@ -128,6 +128,7 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
 		mSurfaceView.getHolder().addCallback(this);// Surface回调函数：
 		mSurfaceView.setKeepScreenOn(true);
 
+		bindService(new Intent("com.hwatong.media.MediaScannerService"), mMediaServiceConnection, BIND_AUTO_CREATE);
 		mAudioManager.requestAudioFocus(mAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 		timeUpdateHandler.sendEmptyMessageDelayed(MSG_TIME_TOOL, 3000);
 	}
@@ -231,12 +232,12 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
 				resume();
 				break;
 			case AudioManager.AUDIOFOCUS_LOSS:// 失去了Audio Focus，并将会持续很长的时间
-				if (mMediaPlayer.isPlaying()) {
+				if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
 					pause();
 				}
 				break;
 			case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:// 暂时失去AudioFocus，并会很快再次获得。必须停止Audio的播放，但是因为可能会很快再次获得AudioFocus，这里可以不释放Media资源；
-				if (mMediaPlayer.isPlaying()) {
+				if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
 					pause();
 				}
 				break;
@@ -258,20 +259,27 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
 		}
 	};
 
-	@Override
-	protected void onResume() {
-		super.onResume();
-		if (Constant.DEBUG)
-			Log.i(Constant.TAG_USB_PICTURE, "onResume ");
-
-		bindService(new Intent("com.hwatong.media.MediaScannerService"), mMediaServiceConnection, BIND_AUTO_CREATE);
-		bindService(new Intent("com.remote.hwatong.statusinfoservice"), mStatusBarConnection, BIND_AUTO_CREATE);
-	}
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (Constant.DEBUG)
+            Log.i(Constant.TAG_USB_PICTURE, "onResume ");
+        default_option();
+        bindService(new Intent("com.remote.hwatong.statusinfoservice"), mStatusBarConnection, BIND_AUTO_CREATE);
+    }
 
 	@Override
 	protected void onPause() {
 		if (Constant.DEBUG)
 			Log.i(Constant.TAG_USB_PICTURE, "onPause");
+
+		super.onPause();
+	}
+
+	@Override
+	protected void onDestroy() {
+		if (Constant.DEBUG)
+			Log.i(Constant.TAG_USB_PICTURE, "onDestroy");
 
 		if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
 			pause();
@@ -290,13 +298,6 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
 		mStatusBarInfo = null;
 		unbindService(mStatusBarConnection);
 		mAudioManager.abandonAudioFocus(mAudioFocusChangeListener);
-		super.onPause();
-	}
-
-	@Override
-	protected void onDestroy() {
-		if (Constant.DEBUG)
-			Log.i(Constant.TAG_USB_PICTURE, "onDestroy");
 		unregisterReceiver(mReceiver);
 		super.onDestroy();
 	}
@@ -312,7 +313,7 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
 				tvFolder.setText(R.string.upper_level);
 				tvFolder.setVisibility(View.VISIBLE);
 			}
-			mVideoAdapter.notifyData(file.toString());
+			// mVideoAdapter.notifyData(file.toString());
 			if (mVideoAdapter.getCount() == 0) {
 				mVideoList.setVisibility(View.GONE);
 				mNoVideoFile.setVisibility(View.VISIBLE);
@@ -321,6 +322,7 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
 				mNoVideoFile.setVisibility(View.GONE);
 			}
 		} else {
+			mVideoAdapter.notifyData(Utils.getPreDirectory(file.toString()));
 			int position = mVideoAdapter.getPositionByPath(file.toString());
 			videoEnterPlayer(file.toString(), position, 0);
 		}
@@ -469,31 +471,42 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
 	private void onVideoListChanged() {
 		if (Constant.DEBUG)
 			Log.i(Constant.TAG_USB_VIDEO, "onVideoListChanged");
+		if (mService == null)
+			return;
+		VideoEntry entry = null;
+		String path = null;
+		try {
+			path = VideoUtils.getPlayingVideoPath(UsbVideoActivity.this);
+			if (mService.getVideoList() != null && mService.getVideoList().size() > 0) {
+				entry = mService.getVideoList().get(0);
+				mVideoAdapter.notifyData(Utils.getPreDirectory(entry.mFilePath));
+				Log.d(Constant.TAG_USB_VIDEO, "mVideoFilePath : " + entry.mFilePath);
+			}
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
 
-		mVideoAdapter.notifyData(mFolderFragment.getPath());
-
-		if (mVideoAdapter.getCount() > 0) {
-			mVideoList.setVisibility(View.VISIBLE);
-			mNoVideoFile.setVisibility(View.GONE);
-		} else {
-			mVideoList.setVisibility(View.GONE);
-			mNoVideoFile.setVisibility(View.VISIBLE);
+		if (!path.equals("")) {
+			mVideoAdapter.notifyData(Utils.getPreDirectory(path));
+			Log.d("dengshun", "Path : " + "." + path + ".");
+		} else if (entry != null) {
+			videoEnterPlayer(entry.mFilePath, 0, 0);
 		}
 
 		default_option();
 	}
 
-	private void default_option() {
-		if (mVideoAdapter.getCount() > 0) {
-			String path = VideoUtils.getPlayingVideoPath(UsbVideoActivity.this);
-			int position = mVideoAdapter.getPositionByPath(path);
-			if (position != -1) {
-				int progress = VideoUtils.getPlayingVideoProgress(UsbVideoActivity.this);
-				videoEnterPlayer(path, position, progress);
-			} else {
-				VideoEntry e = (VideoEntry) mVideoAdapter.getItem(0);
-				videoEnterPlayer(e.mFilePath, 0, 0);
-			}
+    private void default_option() {
+        if (mVideoAdapter != null && mVideoAdapter.getCount() > 0) {
+            String path = VideoUtils.getPlayingVideoPath(UsbVideoActivity.this);
+            int position = mVideoAdapter.getPositionByPath(path);
+            if (position != -1) {
+                int progress = VideoUtils.getPlayingVideoProgress(UsbVideoActivity.this);
+                videoEnterPlayer(path, position, progress);
+            } else {
+                VideoEntry e = (VideoEntry) mVideoAdapter.getItem(0);
+                videoEnterPlayer(e.mFilePath, 0, 0);
+            }
 
 			loopMode = VideoUtils.getLoopMode(UsbVideoActivity.this);
 			if (loopMode == ONE) {
@@ -855,7 +868,11 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
 	 */
 	private void quitFullScreen() {
 		isFullScreen = false;
-		mVideoList.setVisibility(View.VISIBLE);
+		if (mVideoAdapter.getCount() == 0) {
+			mNoVideoFile.setVisibility(View.VISIBLE);
+		} else {
+			mVideoList.setVisibility(View.VISIBLE);
+		}
 		mVideoBottomBar.setVisibility(View.VISIBLE);
 		final WindowManager.LayoutParams attrs = getWindow().getAttributes();
 		attrs.flags &= (~WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -869,6 +886,7 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
 	private void enterFullScreen() {
 		isFullScreen = true;
 		mVideoList.setVisibility(View.GONE);
+		mNoVideoFile.setVisibility(View.GONE);
 		mVideoBottomBar.setVisibility(View.GONE);
 		timeUpdateHandler.removeMessages(MSG_TIME_TOOL);
 		timeUpdateHandler.sendEmptyMessageDelayed(MSG_TIME_TOOL, 3000);
@@ -888,7 +906,7 @@ public class UsbVideoActivity extends Activity implements SurfaceHolder.Callback
 			mTransaction.show(mFolderFragment).commit();
 		} else if (!mFolderFragment.getPath().equals(Constant.ROOT_DIR_PATH)) {
 			mFolderFragment.setPath(Utils.getPreDirectory(mFolderFragment.getPath()));
-			mVideoAdapter.notifyData(mFolderFragment.getPath());
+			// mVideoAdapter.notifyData(mFolderFragment.getPath());
 			if (mVideoAdapter.getCount() == 0) {
 				mVideoList.setVisibility(View.GONE);
 				mNoVideoFile.setVisibility(View.VISIBLE);

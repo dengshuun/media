@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="systemui">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../Launcher/libs/systemui.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

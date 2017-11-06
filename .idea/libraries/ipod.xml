@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="ipod">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../PlatformAdapter/libs/ipod.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

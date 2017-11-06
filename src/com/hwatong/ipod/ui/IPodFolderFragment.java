@@ -56,13 +56,13 @@ public class IPodFolderFragment extends Fragment implements OnClickFolderListene
 				} else {
 					Object obj = mContentData.get(position);
 					if (obj instanceof Artist) {
-						mIPodMainActivity.setPlayList(Constant.ARTIST, ((Artist) obj).mId);
+						mIPodMainActivity.setPlayList(getString(R.string.ARTIST), ((Artist) obj).mId);
 					} else if (obj instanceof Album) {
-						mIPodMainActivity.setPlayList(Constant.ALBUM, ((Album) obj).mId);
+						mIPodMainActivity.setPlayList(getString(R.string.ALBUM), ((Album) obj).mId);
 					} else if (obj instanceof Genre) {
-						mIPodMainActivity.setPlayList(Constant.GENRE, ((Genre) obj).mId);
+						mIPodMainActivity.setPlayList(getString(R.string.GENRE), ((Genre) obj).mId);
 					} else if (obj instanceof Playlist) {
-						mIPodMainActivity.setPlayList(Constant.PLAY_LIST, ((Playlist) obj).mId);
+						mIPodMainActivity.setPlayList(getString(R.string.PLAY_LIST), ((Playlist) obj).mId);
 					}
 				}
 				mIPodMainActivity.onRoot();
@@ -77,10 +77,10 @@ public class IPodFolderFragment extends Fragment implements OnClickFolderListene
 	 */
 	private void update(String path) {
 		if (isRootFolder()) {
-			mContentUI = new String[] { Constant.PLAY_LIST, Constant.GENRE, Constant.ARTIST, Constant.ALBUM };
+			mContentUI = new String[] { getString(R.string.PLAY_LIST), getString(R.string.GENRE), getString(R.string.ARTIST), getString(R.string.ALBUM) };
 		} else {
 			String type = mPath.split("//")[1];
-			if (type.equals(Constant.PLAY_LIST)) {
+			if (type.equals(getString(R.string.PLAY_LIST))) {
 				mContentData = mIPodMainActivity.getPlayList();
 				if (mContentData == null) {
 					mContentUI = new String[0];
@@ -91,7 +91,7 @@ public class IPodFolderFragment extends Fragment implements OnClickFolderListene
 						mContentUI[i] = playlist.mName;
 					}
 				}
-			} else if (type.equals(Constant.GENRE)) {
+			} else if (type.equals(getString(R.string.GENRE))) {
 				mContentData = mIPodMainActivity.getGenreList();
 				if (mContentData == null) {
 					mContentUI = new String[0];
@@ -106,7 +106,7 @@ public class IPodFolderFragment extends Fragment implements OnClickFolderListene
 						}
 					}
 				}
-			} else if (type.equals(Constant.ARTIST)) {
+			} else if (type.equals(getString(R.string.ARTIST))) {
 				mContentData = mIPodMainActivity.getArtistList();
 				if (mContentData == null) {
 					mContentUI = new String[0];
@@ -121,7 +121,7 @@ public class IPodFolderFragment extends Fragment implements OnClickFolderListene
 						}
 					}
 				}
-			} else if (type.equals(Constant.ALBUM)) {
+			} else if (type.equals(getString(R.string.ALBUM))) {
 				mContentData = mIPodMainActivity.getAlbumList();
 				if (mContentData == null) {
 					mContentUI = new String[0];

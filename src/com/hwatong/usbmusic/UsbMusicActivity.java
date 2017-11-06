@@ -85,13 +85,12 @@ public class UsbMusicActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_usb_music);
 
-		// 接收广播
-		IntentFilter filter = new IntentFilter();
-		filter.addAction(UsbManager.ACTION_USB_DEVICE_DETACHED);
-		filter.addAction("com.hwatong.voice.PLAY_MODE");
-		filter.addAction("com.hwatong.voice.CLOSE_MUSIC");
-		filter.addAction("com.hwatong.voice.PLAY_MUSIC");
-		registerReceiver(mReceiver, filter);
+        // 接收广播
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(UsbManager.ACTION_USB_DEVICE_DETACHED);
+        filter.addAction("com.hwatong.voice.CLOSE_MUSIC");
+        filter.addAction("com.hwatong.voice.PLAY_MUSIC");
+        registerReceiver(mReceiver, filter);
 
 		initFolderFragment();
 		initView();
@@ -139,67 +138,36 @@ public class UsbMusicActivity extends Activity implements OnClickListener {
 		mMusicList.setOnItemClickListener(mMusicOnItemClickListener);
 	}
 
-	private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			String action = intent.getAction();
-			Log.d(Constant.TAG_USB_MUSIC, "--- 接收到广播， action: " + action);
-			if (UsbManager.ACTION_USB_DEVICE_DETACHED.equals(action) || "com.hwatong.voice.CLOSE_MUSIC".equals(action)) {
-				finish();
-				Log.e(Constant.TAG_USB_MUSIC, "USB device is Detached:");
-			}
-			if ("com.hwatong.voice.PLAY_MODE".equals(action)) {
-				String mode = null;
-				if (intent.hasExtra("mode")) {
-					mode = intent.getStringExtra("mode");
-				}
-				if ("loop".equals(mode)) {
-					if (mMusicService != null) {
-						try {
-							mMusicService.setNowPlayingInformation(1);
-						} catch (RemoteException e) {
-							e.printStackTrace();
-						}
-					}
-				} else if ("single_loop".equals(mode)) {
-					if (mMusicService != null) {
-						try {
-							mMusicService.setNowPlayingInformation(2);
-						} catch (RemoteException e) {
-							e.printStackTrace();
-						}
-					}
-				} else if ("random".equals(mode)) {
-					if (mMusicService != null) {
-						try {
-							mMusicService.setNowPlayingInformation(0);
-						} catch (RemoteException e) {
-							e.printStackTrace();
-						}
-					}
-				}
-			}
-			if ("com.hwatong.voice.PLAY_MUSIC".equals(action)) {
-				String song = null;
-				String artist = null;
-				String path = null;
-				if (intent.hasExtra("song")) {
-					song = intent.getStringExtra("song");
-				}
-				if (intent.hasExtra("artist")) {
-					artist = intent.getStringExtra("artist");
-				}
-				if (song != null) {
-					path = getSongListPosition(song);
-				} else if (artist != null) {
-					path = getSongListPosition(artist);
-				}
-				if (path != null) {
-					musicEnterPlayer(path);
-				}
-			}
-		}
-	};
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            Log.d(Constant.TAG_USB_MUSIC, "--- 接收到广播， action: " + action);
+            if (UsbManager.ACTION_USB_DEVICE_DETACHED.equals(action) || "com.hwatong.voice.CLOSE_MUSIC".equals(action)) {
+                finish();
+                Log.e(Constant.TAG_USB_MUSIC, "USB device is Detached:");
+            }
+            if ("com.hwatong.voice.PLAY_MUSIC".equals(action)) {
+                String song = null;
+                String artist = null;
+                String path = null;
+                if (intent.hasExtra("song")) {
+                    song = intent.getStringExtra("song");
+                }
+                if (intent.hasExtra("artist")) {
+                    artist = intent.getStringExtra("artist");
+                }
+                if (song != null) {
+                    path = getSongListPosition(song);
+                } else if (artist != null) {
+                    path = getSongListPosition(artist);
+                }
+                if (path != null) {
+                    musicEnterPlayer(path);
+                }
+            }
+        }
+    };
 
 	private String getSongListPosition(String song) {
 		if (song == null || song.isEmpty())
@@ -347,11 +315,10 @@ public class UsbMusicActivity extends Activity implements OnClickListener {
 
 		if (mNowPlaying.mTitle == null || !mNowPlaying.mTitle.equals(tvSong.getText())) {
 			tvSong.setText(mNowPlaying.mTitle);
-
-			if (mMusicAdapter != null) {
-				mMusicAdapter.setmNowPlaying(mNowPlaying);
-				mMusicAdapter.notifyNowPlayingReceived();
-			}
+		}
+		if (mMusicAdapter != null) {
+			mMusicAdapter.setmNowPlaying(mNowPlaying);
+			mMusicAdapter.notifyNowPlayingReceived();
 		}
 		tvSinger.setText(mNowPlaying.mArtist);
 		tvAlbum.setText(mNowPlaying.mAlbum);
@@ -397,12 +364,27 @@ public class UsbMusicActivity extends Activity implements OnClickListener {
 	}
 
 	private void onMusicListChanged() {
-		mMusicAdapter.notifyData(mFolderFragment.getPath());
+		if (mMusicService == null)
+			return;
+		MusicEntry entry = null;
+		String path = null;
+		try {
+			if (mMusicService.getPlayList() != null && mMusicService.getPlayList().size() > 0)
+				entry = mMusicService.getPlayList().get(0);
+			if (mMusicService.getMusicList() != null && mMusicService.getMusicList().size() > 0)
+				path = mMusicService.getMusicList().get(0).mFilePath;
+			mMusicAdapter.notifyData(Utils.getPreDirectory(path));
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
 
 		if (mMusicAdapter.getCount() > 0) {
 			if (mMusicService != null) {
 				try {
 					Log.d(Constant.TAG_USB_MUSIC, "mMusicService.play() : " + mMusicService.getNowPlaying(true).mTitle);
+					if (mMusicService.getNowPlaying(true).mTitle.equals("")) {
+						mMusicService.open(path);
+					}
 					mMusicService.play();
 				} catch (RemoteException e) {
 					e.printStackTrace();
@@ -410,9 +392,9 @@ public class UsbMusicActivity extends Activity implements OnClickListener {
 			}
 			mMusicList.setVisibility(View.VISIBLE);
 			mNoMusicFile.setVisibility(View.GONE);
-		} else {
-			mMusicList.setVisibility(View.GONE);
-			mNoMusicFile.setVisibility(View.VISIBLE);
+		}
+		if (entry != null) {
+			mMusicAdapter.notifyData(Utils.getPreDirectory(entry.mFilePath));
 		}
 	}
 
@@ -501,8 +483,6 @@ public class UsbMusicActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onPause() {
 
-		mStatusBarInfo = null;
-		unbindService(mStatusBarConnection);
 		if (Constant.DEBUG)
 			Log.i(Constant.TAG_USB_MUSIC, "onPause");
 		super.onPause();
@@ -519,6 +499,8 @@ public class UsbMusicActivity extends Activity implements OnClickListener {
 				e.printStackTrace();
 			}
 		}
+		mStatusBarInfo = null;
+		unbindService(mStatusBarConnection);
 		mMusicService = null;
 		unbindService(mMusicServiceConnection);
 		mMusicHandler.removeCallbacksAndMessages(null);
@@ -594,67 +576,6 @@ public class UsbMusicActivity extends Activity implements OnClickListener {
 
 	};
 
-	// private int getPrePosition() {
-	// int prePos = -1;
-	//
-	// int mode = mNowPlaying.mPlaybackRepeatMode;
-	// int mCurPosition = mMusicAdapter.getSongListPosition(mNowPlaying.mId);
-	// int size = 0;
-	// synchronized (mMusicList) {
-	// size = mMusicList.getCount();
-	// }
-	// if (size == 0)
-	// return -1;
-	//
-	// switch (mode) {
-	// case com.hwatong.music.NowPlaying.PlaybackRepeatMode_Shuffle:
-	// prePos = mRandom.nextInt(size);
-	// while (prePos == mCurPosition && size > 1) {
-	// prePos = mRandom.nextInt(size);
-	// }
-	// break;
-	// case com.hwatong.music.NowPlaying.PlaybackRepeatMode_All:
-	// case com.hwatong.music.NowPlaying.PlaybackRepeatMode_One:
-	// prePos = mCurPosition - 1;
-	// if (prePos < 0)
-	// prePos = size - 1;
-	// break;
-	// }
-	//
-	// return prePos;
-	// }
-	//
-	// private int getNextPosition() {
-	// int nextPos = -1;
-	//
-	// int mode = mNowPlaying.mPlaybackRepeatMode;
-	// int mCurPosition = mMusicAdapter.getSongListPosition(mNowPlaying.mId);
-	// int size = 0;
-	// synchronized (mMusicList) {
-	// size = mMusicList.getCount();
-	// }
-	//
-	// if (size == 0)
-	// return -1;
-	//
-	// switch (mode) {
-	// case com.hwatong.music.NowPlaying.PlaybackRepeatMode_All:
-	// case com.hwatong.music.NowPlaying.PlaybackRepeatMode_One:
-	// nextPos = mCurPosition + 1;
-	// if (nextPos >= size)
-	// nextPos = 0;
-	// break;
-	// case com.hwatong.music.NowPlaying.PlaybackRepeatMode_Shuffle:
-	// nextPos = mRandom.nextInt(size);
-	// while (nextPos == mCurPosition && size > 1) {
-	// nextPos = mRandom.nextInt(size);
-	// }
-	// break;
-	// }
-	//
-	// return nextPos;
-	// }
-
 	@Override
 	public void onClick(View v) {
 
@@ -717,8 +638,6 @@ public class UsbMusicActivity extends Activity implements OnClickListener {
 					tvFolder.setVisibility(View.VISIBLE);
 				}
 			} else {
-				// Intent intent = new Intent(this, MainActivity.class);
-				// startActivity(intent);
 				this.moveTaskToBack(false);
 			}
 			break;
@@ -726,22 +645,6 @@ public class UsbMusicActivity extends Activity implements OnClickListener {
 			break;
 		}
 	}
-
-	// private void nextSong() {
-	// final MusicEntry entry = (MusicEntry)
-	// mMusicAdapter.getItem(getNextPosition());
-	// if (null != entry) {
-	// musicEnterPlayer(entry.mFilePath);
-	// }
-	// }
-	//
-	// private void previousSong() {
-	// final MusicEntry entry = (MusicEntry)
-	// mMusicAdapter.getItem(getPrePosition());
-	// if (null != entry) {
-	// musicEnterPlayer(entry.mFilePath);
-	// }
-	// }
 
 	// 文件夹按钮的功能
 	private void openFolder() {

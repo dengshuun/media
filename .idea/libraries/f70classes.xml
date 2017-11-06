@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="f70classes">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../Launcher/libs/f70classes.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

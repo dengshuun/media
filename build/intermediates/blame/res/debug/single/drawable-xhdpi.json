@@ -164,12 +164,12 @@
         "source": "D:\\workspace\\MediaUI\\res\\drawable-xhdpi\\btn_music_play_red.png"
     },
     {
-        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\bg_picture_top.png",
-        "source": "D:\\workspace\\MediaUI\\res\\drawable-xhdpi\\bg_picture_top.png"
-    },
-    {
         "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\next.png",
         "source": "D:\\workspace\\MediaUI\\res\\drawable-xhdpi\\next.png"
+    },
+    {
+        "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\bg_picture_top.png",
+        "source": "D:\\workspace\\MediaUI\\res\\drawable-xhdpi\\bg_picture_top.png"
     },
     {
         "merged": "D:\\workspace\\MediaUI\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\media_right_bg.png",

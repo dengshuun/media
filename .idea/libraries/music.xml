@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="music">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/libs/music.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
